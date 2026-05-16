@@ -5,22 +5,16 @@ Personal AI agent skills for Claude Code, GitHub Copilot, Codex, and other agent
 ## Install all skills
 
 ```sh
-npx skills@latest add leonardo-luize/skills
-```
-
-## Install a specific skill
-
-```sh
-npx skills@latest add leonardo-luize/skills --skill memory-vault
+npx skills@latest add LeonardoLuize/skills
 ```
 
 ---
 
 ## Skills
 
-| Skill | Description | Install |
-|-------|-------------|---------|
-| [memory-vault](#memory-vault) | Persistent atomic memory vault — always active, zero-token overhead | `--skill memory-vault` |
+| Skill                         | Description                                                         | Status          |
+| ----------------------------- | ------------------------------------------------------------------- | --------------- |
+| [memory-vault](#memory-vault) | Persistent atomic memory vault — always active, zero-token overhead | 🔬 Em validação |
 
 ---
 
@@ -31,6 +25,7 @@ npx skills@latest add leonardo-luize/skills --skill memory-vault
 Always active — no trigger needed. On first run, asks 3 questions to set up your vault (path, identity, language). Every session, reads your preferences and project context silently. After each response, detects and saves new context in nuclear YAML files optimized for minimal token usage.
 
 **Features:**
+
 - Atomic files: one file = one piece of information
 - `core/` loaded every session (`INDEX.md`, `about-me.md`, `preferences.md`)
 - Domain folders: `projects/`, `people/`, `decisions/`
@@ -38,7 +33,7 @@ Always active — no trigger needed. On first run, asks 3 questions to set up yo
 - Surgical updates — only changed fields are rewritten
 
 ```sh
-npx skills@latest add leonardo-luize/skills --skill memory-vault
+npx skills@latest add LeonardoLuize/skills --skill memory-vault
 ```
 
 → Full spec: [`skills/memory-vault/SKILL.md`](skills/memory-vault/SKILL.md)
